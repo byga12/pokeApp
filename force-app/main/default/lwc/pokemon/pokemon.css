@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('/resource/PressStart2PFont') format('woff');
+}
+
+
+.container{
+    font-family: 'Press Start 2P';
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow .2s linear, transform .1s linear;
+    background-color: rgb(240, 213, 172);
+    cursor: pointer;
+}
+
+.container:hover{
+    box-shadow: 10px 10px 50px -20px rgba(0,0,0,0.6);
+    transform: scale(1.03);
+}
+
+.imgContainer{
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.name{
+    font-size: 1rem;
+    padding: .4rem;
+    text-transform: uppercase;
+}
+
+.statsContainer{
+    padding: .5rem;
+    width: 100%;
+    font-size: .7rem;
+}
+
+.stat{
+    background-color: inherit;
+    display: grid;
+    grid-template-columns: 2.7fr 9fr;
+}
+
+.iconStat{
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgba(10, 10, 10, 0.2);
+}
+
+.imgStat{
+    width: 50%;
+}
+
+.textStat{
+    border: 1px solid rgba(10, 10, 10, 0.2);
+    padding: .3rem;
+}
+
+
+.flying{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);    
+}
+
+.poison{
+    background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(204,254,152,1) 0%, rgba(229,253,190,1) 92.4% );
+}
+
+.rock{
+    background-image: linear-gradient( 96.2deg,  rgba(255,230,112,1) 10.4%, rgba(255,100,100,1) 43.8%, rgba(0,93,219,1) 105.8% );
+}
+
+.steel{
+    background-image: linear-gradient( 96.2deg,  rgba(255,230,112,1) 10.4%, rgba(255,100,100,1) 43.8%, rgba(0,93,219,1) 105.8% );
+}
+
+.grass{
+    background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(204,254,152,1) 0%, rgba(229,253,190,1) 92.4% );
+}
+
+.electric{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+}
+
+.ice{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);    
+}
+
+.dark{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+}
+
+.fairy{
+    background-image: linear-gradient( 96.2deg,  rgba(255,230,112,1) 10.4%, rgba(255,100,100,1) 43.8%, rgba(0,93,219,1) 105.8% );
+}
+.fighting, .fire, .dragon{
+    background: #f12711;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f5af19, #f12711);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.rock{
+    background: #E8CBC0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #636FA4, #E8CBC0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #636FA4, #E8CBC0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.water{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}

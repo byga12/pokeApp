@@ -1,0 +1,56 @@
+<template>
+  <div if:false={ready}>Cargando...</div>
+  <div if:true={ready}>
+    <div class="filtersContainer">
+      <lightning-input
+        label="none"
+        name="enter-search"
+        placeholder="Buscar Pokemon..."
+        variant="label-hidden"
+        type="search"
+        onkeyup={handleKeyUp}
+        onchange={handleInputSearchChange}
+      ></lightning-input>
+      <lightning-button
+        variant="brand"
+        label="Búsqueda avanzada"
+        onclick={filterPokemons}
+      ></lightning-button>
+      <lightning-dual-listbox
+        name="types"
+        label="Filtrar por tipo/s"
+        source-label="Sin seleccionar"
+        selected-label="Seleccionados"
+        options={types}
+        field-level-help="Muestra los Pokemon que tengan alguno (no todos) de los tipos seleccionados"
+        onchange={handleTypesSelectChange}
+      ></lightning-dual-listbox>
+
+      <lightning-dual-listbox
+        name="generations"
+        label="Filtrar por generación"
+        source-label="Sin seleccionar"
+        selected-label="Seleccionados"
+        options={generations}
+        field-level-help="Muestra los Pokemon de las generaciones seleccionadas"
+        onchange={handleGenerationsSelectChange}
+      ></lightning-dual-listbox>
+    </div>
+    <h2 class="listSize">Mostrando {listSize} de 898 Pokémon</h2>
+    <div class="listContainer">
+      <template for:each={pokemons} for:item="pokemon">
+        <c-pokemon
+          key={pokemon.ExtId__c}
+          record={pokemon.Id}
+          name={pokemon.Name}
+          image={pokemon.Imagen__c}
+          health={pokemon.Vida__c}
+          attack={pokemon.Ataque__c}
+          defense={pokemon.Defensa__c}
+          speed={pokemon.Velocidad__c}
+          types={pokemon.Tipos__c}
+        ></c-pokemon>
+      </template>
+    </div>
+  </div>
+</template>

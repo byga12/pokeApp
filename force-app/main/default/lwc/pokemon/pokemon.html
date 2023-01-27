@@ -1,0 +1,35 @@
+<template>
+  <div class="container" onclick={handleOpenDetail}>
+    <h2 class="name">{name}</h2>
+    <h2>{type}</h2>
+    <div class="imgContainer">
+      <img class="image" src={image} alt="Pokemon front image" />
+    </div>
+    <div class="statsContainer">
+      <div class="stat">
+        <div class="iconStat health">
+          <img class="imgStat" src={healthIcon} alt="" />
+        </div>
+        <div class="textStat health">{health}</div>
+      </div>
+      <div class="stat">
+        <div class="iconStat health">
+          <img class="imgStat" src={attackIcon} alt="" />
+        </div>
+        <div class="textStat health">{attack}</div>
+      </div>
+      <div class="stat">
+        <div class="iconStat health">
+          <img class="imgStat" src={defenseIcon} alt="" />
+        </div>
+        <div class="textStat health">{defense}</div>
+      </div>
+      <div class="stat">
+        <div class="iconStat health">
+          <img class="imgStat" src={speedIcon} alt="" />
+        </div>
+        <div class="textStat health">{speed}</div>
+      </div>
+    </div>
+  </div>
+</template>

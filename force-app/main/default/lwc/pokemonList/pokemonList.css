@@ -1,0 +1,29 @@
+.listContainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.filtersContainer{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.listSize{
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .filtersContainer{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+}
